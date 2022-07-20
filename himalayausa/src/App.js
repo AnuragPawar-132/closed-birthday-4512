@@ -1,10 +1,18 @@
+
 import logo from './logo.svg';
 import './App.css';
 import AllRoutes from './Pages/AllRoutes';
 
+
+
+import AllRoutes from "./Pages/AllRoutes";
+
+
+
 function App() {
   return (
     <div className="App">
+
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +28,10 @@ function App() {
         </a>
       </header> */}
       <AllRoutes/>
+
+      <AllRoutes/>
+
+    
     </div>
   );
 }

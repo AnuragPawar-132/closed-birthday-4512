@@ -5,7 +5,7 @@ import AllRoutes from './Pages/AllRoutes';
 
 
 
-import AllRoutes from "./Pages/AllRoutes";
+
 
 
 
@@ -27,7 +27,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <AllRoutes/>
+   
 
       <AllRoutes/>
 

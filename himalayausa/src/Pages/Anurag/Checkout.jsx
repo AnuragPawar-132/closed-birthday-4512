@@ -9,6 +9,7 @@ const Checkout=()=>{
                <Box alignContent="left" padding="3% 0% 0% 6%" >
                     <Image w="35%" h="auto" src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/new-logo.png?3734" /> 
                </Box>
+
                <Box w="90%" >
                     <Text fontSize="small" fontWeight="bold" color="blackAlpha.700" fontStyle='system-ui' >Express Checkout</Text>
                     
@@ -20,6 +21,7 @@ const Checkout=()=>{
                         <Button w="33%" bg="black" color="white" >G Pay</Button>
                     </HStack>
                </Box>
+               
             </VStack>
 
             <Box w="45%"  >

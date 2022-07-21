@@ -13,8 +13,15 @@ const RightDivShop = (props) => {
         return (
           <Link key={e.id} className="data-item" to={`${e?.id}`}>
             <img src={e?.Img} className="image" alt="missing" />
-            <h6>{e?.Name}</h6>
-            <h6>$ {e?.Price}</h6>
+            <div className="maindivs">
+            <div className="firstdiv">
+            <h6 className="name">{e?.Name}</h6>
+            </div>
+            <div className="seconddiv">
+            <h6 className="price">$ {e?.Price}</h6>
+            <button className="btn">ADD TO CART</button>
+            </div>
+            </div>
           </Link>
         );
       })}

@@ -1,5 +1,5 @@
 .product-menu-dropdown-div{
-    margin-left: 40%;
+    margin-left: 70%;
     margin-bottom: 3%;
     
 }
@@ -8,7 +8,7 @@
     border: 2px solid gainsboro;
     font-weight: bold;
     font-size: 100%;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 1%;
 }
 
@@ -16,12 +16,11 @@
 
 .maindiv{
     display: flex;
-    width: 100%;
+    width: 97%;
 }
 
 .sidebar_div{
     width: 30%;
-    /* border: 1px solid pink; */
 }
 
 .sidebarfilter{
@@ -35,18 +34,18 @@
 
 .right_div{
     width: 90%;
-    /* border: 1px solid blue; */
 }
 
 .mapping-data{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
 }
 .data-item{
     border: 1px solid honeydew;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: black;
+    height: 105%;
 }
 .image{
     height: 250px;
@@ -57,4 +56,37 @@
     font-weight: bold;
     text-align: center;
     font-size: 40px;
+}
+
+.name{
+    font-size: 18px;
+    color: rgb(95, 94, 94);
+    margin-left: 4%;
+}
+
+.price{
+    font-size: 20px;
+    color: rgb(4, 61, 58);
+    margin-left: 4%;
+    font-weight: bold;
+}
+ .maindivs{
+     width: 100%;
+     height: 35%;
+ }
+.firstdiv{
+     width: 100%;
+     height: 30%;
+}
+.seconddiv{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    margin-top: 18%;
+}
+
+.btn{
+    width: 60%;
+    margin-left: 5%;
+    background-color: rgb(79, 145, 143);
 }

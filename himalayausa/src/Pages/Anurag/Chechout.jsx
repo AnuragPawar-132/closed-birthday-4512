@@ -29,7 +29,7 @@ const Checkout=()=>{
                     <Text color="blackAlpha.700" fontSize='sm' >OR</Text>
                </HStack>
 
-               <Stack w="90%" spacing="3%" >
+               <Stack w="90%" spacing="2%" >
 
                     <HStack justifyContent="space-between" >
                         <Box>
@@ -41,30 +41,30 @@ const Checkout=()=>{
                         </HStack>
                     </HStack>
 
-                    <Input placeholder="Enter Email or Mobile number" />
+                    <Input focusBorderColor="#0D362B" placeholder="Enter Email or Mobile number" />
 
                     <Text fontSize='lg' >Shipping Address</Text>
 
-                    <Input placeholder="Country" />
+                    <Input focusBorderColor="#0D362B" placeholder="Country" />
 
                     <HStack>
-                        <Input placeholder="First Name" />
-                        <Input placeholder="Last Name" />
+                        <Input focusBorderColor="#0D362B" placeholder="First Name" />
+                        <Input focusBorderColor="#0D362B" placeholder="Last Name" />
                     </HStack>
 
-                    <Input placeholder="Address" />
+                    <Input focusBorderColor="#0D362B" placeholder="Address" />
 
-                    <Input placeholder="Appartment" />
+                    <Input focusBorderColor="#0D362B" placeholder="Appartment" />
 
                     <HStack>
-                        <Input placeholder="City" />
-                        <Input placeholder="State" />
-                        <Input type="number" placeholder="Zip Code" />
+                        <Input focusBorderColor="#0D362B" placeholder="City" />
+                        <Input focusBorderColor="#0D362B" placeholder="State" />
+                        <Input focusBorderColor="#0D362B" type="number" placeholder="Zip Code" />
                         </HStack>
 
-                    <Input type="number" placeholder="Phone Number" />
+                    <Input focusBorderColor="#0D362B" type="number" placeholder="Phone Number" />
 
-                    <Button bg="#235E52" color="white" >Proceed to Payment</Button>
+                    <Button bg="#0D362B" color="white" >Proceed to Payment</Button>
 
                </Stack>
                

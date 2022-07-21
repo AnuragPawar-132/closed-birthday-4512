@@ -1,4 +1,4 @@
-import React , {useEffect} from "react";
+
 import RightDivShop from "./RightDivShop";
 import "./Shop.css";
 import SideBarDiv from "./SideBarDiv";
@@ -7,34 +7,45 @@ import { getproduct } from "../../../Redux/AppReducer/action";
 import { useState } from "react";
 
 const Shop = (props) => {
-
+  const [data, setData] = useState([]);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products);
-  const isLoading = useSelector((state) => state.product.isLoading);
-  console.log(products,isLoading);
-//   let filterarray = products;
-
-  const [filterarray , setFilterArray] = useState(products);
-  console.log(filterarray);
+  let filterarray = useSelector((state) => state.product.products);
 
   useEffect(() => {
     dispatch(getproduct());
   }, [dispatch]);
 
   const handlefilter = (value) => {
-     console.log(value)
-     let arr = products.filter((v) => v.Category === value);
-     setFilterArray(arr)
-     console.log(filterarray);
-  }
+    //  console.log(value)
+    filterarray = products.filter((v) => v.Category === value);
+    //  console.log(filterarray);
+  };
+
+  const handleSort = (e) => {
+    let data2 = filterarray.sort((a, b) => {
+      if (e === "priceasc") {
+        return a.Price - b.Price;
+      } else if (e === "pricedesc") {
+        return b.Price - a.Price;
+      } else if (e === "nameasc") {
+        return a.Name.localeCompare(b.Name);
+      } else if (e === "namedesc") {
+        return b.Name.localeCompare(a.Name);
+      }
+    });
+    console.log(data);
+    setData([...data2]);
+  };
   return (
     <div>
-      <h1>Products</h1>
-
+      <div className="heading">
+        <h1>Products</h1>
+      </div>
       <div className="product-menu-dropdown-div">
-        <select className="filter">
+        <select className="filter" onChange={(e) => handleSort(e.target.value)}>
           <option value="Featured">Featured</option>
-          <option value="Best Selling">Best Selling</option>
+          <option value="BestSelling">Best Selling</option>
           <option value="nameasc">Name Ascending</option>
           <option value="namedesc">Name Descending</option>
           <option value="priceasc">Price Ascending</option>
@@ -50,10 +61,10 @@ const Shop = (props) => {
       </div>
       <div className="maindiv">
         <div className="sidebar_div">
-          <SideBarDiv  handlefilter={handlefilter}/>
+          <SideBarDiv handlefilter={handlefilter} />
         </div>
         <div className="right_div">
-          <RightDivShop data={filterarray}/>
+          <RightDivShop data={filterarray} />
         </div>
       </div>
     </div>

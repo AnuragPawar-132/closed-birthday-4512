@@ -1,13 +1,14 @@
 import React from "react";
 import { Stack, HStack, VStack, Text, Box, Image, Button, Spacer, Link, Input } from '@chakra-ui/react'
-
+import CheckoutPayment from "../Components/CheckoutPayment";
+import styles from "./Checkout.module.css"
 
 const Checkout=()=>{
 
     return (
-        <HStack >
+        <div className={styles.mainBox_any}>
 
-            <VStack w="55%"  padding="2%" border="1px solid grey" spacing="3%" >
+            <VStack   padding="2%" border="1px solid grey" spacing="3%" >
 
                <Box alignContent="left" padding="3% 0% 3% 6%" >
                     <Image w="35%" h="auto" src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/new-logo.png?3734" /> 
@@ -29,7 +30,7 @@ const Checkout=()=>{
                     <Text color="blackAlpha.700" fontSize='sm' >OR</Text>
                </HStack>
 
-               <Stack w="90%" spacing="3%" >
+               <Stack w="90%" spacing="2%" >
 
                     <HStack justifyContent="space-between" >
                         <Box>
@@ -41,39 +42,39 @@ const Checkout=()=>{
                         </HStack>
                     </HStack>
 
-                    <Input placeholder="Enter Email or Mobile number" />
+                    <Input focusBorderColor="#0D362B" placeholder="Enter Email or Mobile number" />
 
                     <Text fontSize='lg' >Shipping Address</Text>
 
-                    <Input placeholder="Country" />
+                    <Input focusBorderColor="#0D362B" placeholder="Country" />
 
                     <HStack>
-                        <Input placeholder="First Name" />
-                        <Input placeholder="Last Name" />
+                        <Input focusBorderColor="#0D362B" placeholder="First Name" />
+                        <Input focusBorderColor="#0D362B" placeholder="Last Name" />
                     </HStack>
 
-                    <Input placeholder="Address" />
+                    <Input focusBorderColor="#0D362B" placeholder="Address" />
 
-                    <Input placeholder="Appartment" />
+                    <Input focusBorderColor="#0D362B" placeholder="Appartment" />
 
                     <HStack>
-                        <Input placeholder="City" />
-                        <Input placeholder="State" />
-                        <Input type="number" placeholder="Zip Code" />
+                        <Input focusBorderColor="#0D362B" placeholder="City" />
+                        <Input focusBorderColor="#0D362B" placeholder="State" />
+                        <Input focusBorderColor="#0D362B" type="number" placeholder="Zip Code" />
                         </HStack>
 
-                    <Input type="number" placeholder="Phone Number" />
+                    <Input focusBorderColor="#0D362B" type="number" placeholder="Phone Number" />
 
-                    <Button bg="#235E52" color="white" >Proceed to Payment</Button>
+                    <Button  bg="#0D362B" color="white" >Proceed to Payment</Button>
 
                </Stack>
                
             </VStack>
 
-            <Box w="45%">
-                
-            </Box>
-        </HStack>
+            <VStack padding="8% 3% 3% 3%" justifyContent="flex-start" bg="#f6f6f6" >
+                <CheckoutPayment/>
+            </VStack>
+        </div>
     )
 }
 

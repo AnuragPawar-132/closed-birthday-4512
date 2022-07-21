@@ -1,9 +1,11 @@
 .notify{
     background-color: #f75;
-    height: 32px;
-    padding:10px 0px 0px 0px;
+    height: 40px;
+    /* padding:10px 0px 0px 0px; */
     color: white;
     font-size: 20px;
+    text-align:center;
+    
 }
 .splitfree{
     font-weight: bold;
@@ -62,6 +64,8 @@ header{
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
+    position: absolute;
+    z-index: 999;
 }
 .navbarsub div:hover .megabox1 {
     opacity: 1;
@@ -122,13 +126,13 @@ hr{
     width: auto;
 }
 
-.img{
+.himg{
     height: 330px;
     width: 330px;
-    margin-left: -430px;
+    margin-right: 530px;
     margin-top: 40px;
 }
-.img {
+.himg {
     /* width: 86%; */
     -webkit-transition: all 3s ease;
     -moz-transition: all 3s ease;
@@ -136,12 +140,12 @@ hr{
     transition: all 3s ease;
     cursor: pointer;
   }
-  .img:hover {
+  .himg:hover {
     transform: scale(1.1);
     /* -webkit-transition: all 0.3s ease-out; */
   }
-.btn{
-    margin-left: -430px;
+.himgbtn{
+    /* margin-left: -430px; */
     margin-top: 5px;
     background-color: #f75;
     color: white;
@@ -153,8 +157,8 @@ hr{
     font-size: 18px;
     height: 40px;
 }
-.p{
-    margin-left: -430px;
+.himgp{
+    /* margin-left: -430px; */
     font-size: 18px;
     color: gray;
 }
@@ -395,6 +399,7 @@ hr{
     }
     .navbarsub{
         visibility: hidden;
+
     }
     .himalaya{
         height: 70px;

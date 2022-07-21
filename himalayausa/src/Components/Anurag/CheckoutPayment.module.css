@@ -1,0 +1,8 @@
+.cartBox_any{
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding: 2%;
+    overflow:auto;
+    height: 250px;
+    width: 90%
+}

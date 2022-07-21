@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 
 import RightDivShop from "./RightDivShop";
 import "./Shop.css";

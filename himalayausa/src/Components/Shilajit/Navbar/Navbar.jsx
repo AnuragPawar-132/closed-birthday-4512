@@ -165,10 +165,10 @@ const Navbar = () => {
                            </div>
                        </div>
                        <div>
-                           <img src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/HUSA-Ashwagandha-90ct-Carton_Bottle-square_1024x.png?v=1607451904" alt="" className='img' />
+                           <img src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/HUSA-Ashwagandha-90ct-Carton_Bottle-square_1024x.png?v=1607451904" alt="" className='himg' />
                            <br />
-                           <button className='btn'>Feature Product</button>
-                           <p className='p'>Find Out Why everyone loves best selling Organic Ashwagandha</p>
+                           <button className='himgbtn'>Feature Product</button>
+                           <p className='himgp'>Find Out Why everyone loves best selling Organic Ashwagandha</p>
                        </div>
                    </div>
                    <div>

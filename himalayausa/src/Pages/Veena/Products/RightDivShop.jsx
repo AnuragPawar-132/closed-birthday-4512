@@ -1,9 +1,9 @@
 import React from "react";
-
+import "./Shop.css"
 import { Link } from "react-router-dom";
 
 const RightDivShop = (props) => {
-  console.log(props)
+  // console.log(props)
 
   const products = props.data
   

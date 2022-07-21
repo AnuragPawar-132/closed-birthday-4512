@@ -8,7 +8,7 @@
     border: 2px solid gainsboro;
     font-weight: bold;
     font-size: 100%;
-    margin-left: 15px;
+    margin-left: 40px;
     margin-top: 1%;
 }
 
@@ -30,9 +30,31 @@
     font-weight: bold;
     font-size: 135%;
     text-decoration: none;
+    margin-left: 8%;
 }
 
 .right_div{
     width: 90%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+}
+
+.mapping-data{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.data-item{
+    border: 1px solid honeydew;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: black;
+}
+.image{
+    height: 250px;
+    width: 100%;
+}
+
+.heading{
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
 }

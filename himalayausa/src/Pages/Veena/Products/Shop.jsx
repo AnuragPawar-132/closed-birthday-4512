@@ -9,34 +9,65 @@ import { useState } from "react";
 
 
 const Shop = (props) => {
-
+  const [data,setData] = useState([]);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products);
-  const isLoading = useSelector((state) => state.product.isLoading);
-  console.log(products,isLoading);
+  // const isLoading = useSelector((state) => state.product.isLoading);
+  // console.log(products,isLoading);
 //   let filterarray = products;
 
   const [filterarray , setFilterArray] = useState(products);
-  console.log(filterarray);
+  // console.log(filterarray);
 
   useEffect(() => {
+
     dispatch(getproduct());
   }, [dispatch]);
 
   const handlefilter = (value) => {
-     console.log(value)
+    //  console.log(value)
      let arr = products.filter((v) => v.Category === value);
      setFilterArray(arr)
-     console.log(filterarray);
+    //  console.log(filterarray);
   }
+
+  const handleSort = (e) => {
+    
+        let data2 = filterarray.sort((a,b) => {
+            if(e === "priceasc"){
+                return a.Price - b.Price;
+            }
+            else if(e === "pricedesc"){
+                return b.Price - a.Price;
+            }
+            else if(e === "nameasc"){
+                 return a.Name.localeCompare(b.Name);
+            }
+            else if(e === "namedesc"){
+               return b.Name.localeCompare(a.Name);
+            }
+            else if(e === "BestSelling"){
+              let data3 = filterarray.filter(a => {
+                //   console.log(a.top_rated,e.target.value)
+                  return a.Best_Selling === e.target.value;
+              })
+              setData([...data3])
+            }
+        })
+        // console.log(data2)
+        setData([...data2]) 
+    }
+
   return (
     <div>
-      <h1>Products</h1>
 
+      <div className="heading">
+        <h1>Products</h1>
+      </div>
       <div className="product-menu-dropdown-div">
-        <select className="filter">
+        <select className="filter" onChange={(e) => handleSort(e.target.value)}>
           <option value="Featured">Featured</option>
-          <option value="Best Selling">Best Selling</option>
+          <option value="BestSelling">Best Selling</option>
           <option value="nameasc">Name Ascending</option>
           <option value="namedesc">Name Descending</option>
           <option value="priceasc">Price Ascending</option>

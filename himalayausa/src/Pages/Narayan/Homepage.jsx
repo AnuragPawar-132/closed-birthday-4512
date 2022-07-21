@@ -1,11 +1,14 @@
 import React from 'react'
 import BannerCarousel from './Carousel';
+import ShopByCategory from './ShopByCategory';
+
 
 const Homepage = () => {
   return (
       <div>
           <div>
-                 <BannerCarousel/>
+        <BannerCarousel />
+        <ShopByCategory/>
           </div>
        
     </div>

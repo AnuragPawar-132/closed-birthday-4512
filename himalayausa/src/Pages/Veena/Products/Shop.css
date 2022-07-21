@@ -89,4 +89,7 @@
     width: 60%;
     margin-left: 5%;
     background-color: rgb(79, 145, 143);
+    height: 40px;
+    color: white;
+    font-weight: bold;
 }

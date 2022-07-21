@@ -1,12 +1,10 @@
 import React , {useEffect} from "react";
-import Navbar from "../Navbar/Navbar";
 import RightDivShop from "./RightDivShop";
 import "./Shop.css";
 import SideBarDiv from "./SideBarDiv";
 import { useSelector, useDispatch } from "react-redux";
 import { getproduct } from "../../../Redux/AppReducer/action";
 import { useState } from "react";
-// import { useState } from "react";
 
 const Shop = (props) => {
 
@@ -31,7 +29,6 @@ const Shop = (props) => {
   }
   return (
     <div>
-      <Navbar />
       <h1>Products</h1>
 
       <div className="product-menu-dropdown-div">

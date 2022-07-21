@@ -1,0 +1,5 @@
+.mainBox_any{
+    display: grid;
+    grid-template-columns: 57% 43%;
+    margin: auto;
+}

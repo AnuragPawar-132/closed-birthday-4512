@@ -1,5 +1,6 @@
 
 
+
 // import './App.css';
 
 // import logo from './logo.svg';
@@ -13,6 +14,7 @@ import AllRoutes from './Pages/AllRoutes';
 function App() {
   return (
     <div className="App">
+
 
 <AllRoutes/>
 
@@ -38,6 +40,9 @@ function App() {
       <Registration/>
 
     
+
+
+        <AllRoutes/>
 
     </div>
   );

@@ -10,6 +10,8 @@ import OralCareDetails from "./Veena/Products/OralCare/OralCareDetails";
 import ShopDetails from "./Veena/Products/Shop/ShopDetails";
 import Herbal from "./Veena/Products/Herbal/Herbal";
 import HerbalDetail from "./Veena/Products/Herbal/HerbalDetail"
+import PersonalCare from "./Veena/Products/PersonalCare/PersonalCare";
+import PersonalCareDetail from "./Veena/Products/PersonalCare/PersonalCareDetail"
 
 const AllRoutes = () => {
   return (
@@ -25,6 +27,8 @@ const AllRoutes = () => {
         <Route path="/OralCare/:id" element={<OralCareDetails />} />
         <Route path="/HerbalSupplements" element={<Herbal />} />
         <Route path="/HerbalSupplements/:id" element={<HerbalDetail />} />
+        <Route path="/PersonalCare" element={<PersonalCare />} />
+        <Route path="/PersonalCare/:id" element={<PersonalCareDetail />} />
       </Routes>
     </div>
   );

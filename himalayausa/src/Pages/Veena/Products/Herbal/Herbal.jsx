@@ -59,7 +59,7 @@ const OralCare = (props) => {
           <SideBarOral />
         </div>
         <div className="right_div">
-          <OralRightDiv data={data} />
+          <RightDiv data={data} />
         </div>
       </div>
     </div>

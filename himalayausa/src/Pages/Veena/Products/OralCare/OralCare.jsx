@@ -1,29 +1,26 @@
 import React,{useEffect} from "react";
-import RightDivShop from "./RightDivShop";
-import "./Shop.css";
-import SideBarDiv from "./SideBarDiv";
-import { useSelector, useDispatch } from "react-redux";
-import { getproduct } from "../../../Redux/AppReducer/action";
+import OralRightDiv from "./OralRightDiv";
+import "../Shop.css";
+import SideBarOral from "./SideBarOral";
 import { useState } from "react";
+import axios from "axios";
+// import { useSelector} from "react-redux";
 
-const Shop = (props) => {
+const OralCare = (props) => {
   const [data, setData] = useState([]);
-  const dispatch = useDispatch();
-  const products = useSelector((state) => state.product.products);
-  let filterarray = useSelector((state) => state.product.products);
+  // let filterarray = useSelector((state) => state.product.products);
 
   useEffect(() => {
-    dispatch(getproduct());
-  }, [dispatch]);
-
-  const handlefilter = (value) => {
-    //  console.log(value)
-    filterarray = products.filter((v) => v.Category === value);
-    //  console.log(filterarray);
-  };
+    axios.get("https://my-himalayausa-project.herokuapp.com/Products?Category=Oral%20Care")
+    .then((r) => {
+      console.log(r.data);
+      setData(r.data)
+    })
+  }, [setData]);
 
   const handleSort = (e) => {
-    let data2 = filterarray.sort((a, b) => {
+    // console.log(data)
+    let data2 = data.sort((a, b) => {
       if (e === "priceasc") {
         return a.Price - b.Price;
       } else if (e === "pricedesc") {
@@ -34,13 +31,13 @@ const Shop = (props) => {
         return b.Name.localeCompare(a.Name);
       }
     });
-    console.log(data);
+    // console.log(data);
     setData([...data2]);
   };
   return (
     <div>
       <div className="heading">
-        <h1>Products</h1>
+        <h1>Oral Care</h1>
       </div>
       <div className="product-menu-dropdown-div">
         <select className="filter" onChange={(e) => handleSort(e.target.value)}>
@@ -61,14 +58,14 @@ const Shop = (props) => {
       </div>
       <div className="maindiv">
         <div className="sidebar_div">
-          <SideBarDiv handlefilter={handlefilter} />
+          <SideBarOral />
         </div>
         <div className="right_div">
-          <RightDivShop data={filterarray} />
+          <OralRightDiv data={data} />
         </div>
       </div>
     </div>
   );
 };
 
-export default Shop;
+export default OralCare;

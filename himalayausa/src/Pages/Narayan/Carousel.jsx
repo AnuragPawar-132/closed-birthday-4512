@@ -11,7 +11,6 @@ import {
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 
-
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 // And react-slick as our Carousel Lib
 import Slider from "react-slick";
@@ -23,8 +22,8 @@ const settings = {
   fade: true,
   infinite: true,
   autoplay: true,
-  speed: 1000,
-  autoplaySpeed: 3500,
+  speed: 800,
+  autoplaySpeed: 2500,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -65,9 +64,10 @@ export default function BannerCarousel() {
   return (
     <Box
       position={"relative"}
-      height={"600px"}
+      height={"550px"}
       width={"full"}
       overflow={"hidden"}
+      mt={"-20px"}
     >
       {/* CSS files for react-slick */}
 
@@ -111,7 +111,6 @@ export default function BannerCarousel() {
       </IconButton>
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        
         {cards.map((card, index) => (
           <Box
             key={index}
@@ -133,7 +132,10 @@ export default function BannerCarousel() {
                 left="-50%"
                 transform="translate(0, -50%)"
               >
-                <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+                <Heading
+                  bg={"white"} fontWeight="500"
+                  fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+                >
                   {card.title}
                 </Heading>
                 <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">

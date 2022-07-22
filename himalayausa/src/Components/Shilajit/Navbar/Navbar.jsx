@@ -47,7 +47,7 @@ const Navbar = () => {
        <nav className='wrapper'>
        <div className='hum'>
                <img src={hum} alt="" className="Th-lines" onClick={(()=>setClose(true))} />
-               <img src="https://leap.himalayawellness.com/IOD/Content/images/login/header_logo.png" alt="" className="himalaya" onClick={(()=>Navigate('/'))}/>
+               <img src="https://leap.himalayawellness.com/IOD/Content/images/login/header_logo.png" alt="" className="himimg" onClick={(()=>Navigate('/'))}/>
            </div>
 
            <div className='navbarsub'>
@@ -179,25 +179,25 @@ const Navbar = () => {
            </div>
     
            <div className="rightside-icons">
-               <div className='icons'>
-                   <img src="https://www.linkpicture.com/q/search_9.png" alt="" onClick={()=>setToggle(true)} className="icon-img" />
-               </div>
-               <div className='hover_drop-down'>
-                   <div className='icons'>
-                       <img src="https://www.linkpicture.com/q/userlogo.png" alt="" className="icon-img"/>
-                   </div>
-                   <div className='mini_drop-box'>
-                       <div className='grid'>
-                           <Link className='link-l' to={'/SignIn'}>Sign In</Link>
-                           <Link className='link-l' to={'/Login'}>Register</Link>
-                           <Link className='link-l' to={'/Checkout'}>Checkout</Link>
-                       </div>
-                   </div>
-               </div>
-               <Link to='/Cart' className='icons'>
-                   <img src="https://www.linkpicture.com/q/shopping-bag.png" alt="" className="icon-img" />
-               </Link>
-           </div>
+                <div className='icons'>
+                    <img src="https://www.linkpicture.com/q/search_9.png" alt="" onClick={()=>setToggle(true)} className="icon-img" />
+                </div>
+                <div className='hover_drop-down'>
+                    <div className='icons'>
+                        <img src="https://www.linkpicture.com/q/userlogo.png" alt="" className="icon-img"/>
+                    </div>
+                    <div className='mini_drop-box'>
+                        <div className='grid'>
+                            <Link className='link-l' to={'/SignIn'}>Sign In</Link>
+                            <Link className='link-l' to={'/Login'}>Register</Link>
+                            <Link className='link-l' to={'/Checkout'}>Checkout</Link>
+                        </div>
+                    </div>
+                </div>
+                <Link to='/Cart' className='icons'>
+                    <img src="https://www.linkpicture.com/q/shopping-bag.png" alt="" className="icon-img" />
+                </Link>
+            </div>
            
        </nav>
 

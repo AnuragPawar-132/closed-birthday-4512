@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Text, Image, Stack } from "@chakra-ui/react";
+import styles from "./ShopByCategory.module.css"
 
 const ShopByCategory = () => {
   return (
@@ -25,6 +26,7 @@ const ShopByCategory = () => {
               justifyContent="center"
             >
               <Image
+                className={styles.nimages101}
                 src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/HUSA-Ashwagandha-90ct-Carton_Bottle-square_1024x.png?v=1607451904"
                 alt="Supplyments"
                 height="350px"
@@ -45,6 +47,7 @@ const ShopByCategory = () => {
               justifyContent="center"
             >
               <Image
+                className={styles.nimages101}
                 src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/WCC-SIMPLY-MINT-RENDER-WITH-BRUSH-High-Res_1024x.png?v=1607451904"
                 alt="Supplyments"
                 height="350px"
@@ -65,6 +68,7 @@ const ShopByCategory = () => {
               justifyContent="center"
             >
               <Image
+                className={styles.nimages101}
                 src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/Face_Wash-Balancing-Box-Bottle-square_1024x.png?v=1607451904"
                 alt="Supplyments"
                 height="350px"

@@ -5,7 +5,7 @@ import SideBarOral from "./SideBarOral";
 import { useState } from "react";
 import axios from "axios";
 
-const OralCare = (props) => {
+const Herbal = (props) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -66,4 +66,4 @@ const OralCare = (props) => {
   );
 };
 
-export default OralCare;
+export default Herbal;

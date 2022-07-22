@@ -22,8 +22,8 @@ const settings = {
   fade: true,
   infinite: true,
   autoplay: true,
-  speed: 1000,
-  autoplaySpeed: 3500,
+  speed: 800,
+  autoplaySpeed: 2500,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -64,9 +64,10 @@ export default function BannerCarousel() {
   return (
     <Box
       position={"relative"}
-      height={"600px"}
+      height={"550px"}
       width={"full"}
       overflow={"hidden"}
+      mt={"-20px"}
     >
       {/* CSS files for react-slick */}
 

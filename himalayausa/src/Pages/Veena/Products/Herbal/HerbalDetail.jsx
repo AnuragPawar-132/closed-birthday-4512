@@ -10,7 +10,7 @@ const OralCareDetails = (props) => {
 
   useEffect(() => {
     axios({
-      url: `https://my-himalayausa-project.herokuapp.com/Products?Category=Herbal%20Care&id=${params.id}`,
+      url: `https://my-himalayausa-project.herokuapp.com/Products?Category=Herbal%20Supplements&id=${params.id}`,
       method: "GET",
     }).then((r) => {
       console.log(r);

@@ -1,7 +1,7 @@
 import React,{useEffect} from "react";
 import HerbalRightDiv from "./HerbalRightDiv";
 import "../Shop.css";
-import SideBarOral from "./SideBarOral";
+import HerbalSideBarDiv from "./HerbalSideBarDiv";
 import { useState } from "react";
 import axios from "axios";
 
@@ -9,7 +9,7 @@ const Herbal = (props) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("https://my-himalayausa-project.herokuapp.com/Products?=Herbal%20Care")
+    axios.get("https://my-himalayausa-project.herokuapp.com/Products?Category=Herbal%20Supplements")
     .then((r) => {
       console.log(r.data);
       setData(r.data)
@@ -35,7 +35,7 @@ const Herbal = (props) => {
   return (
     <div>
       <div className="heading">
-        <h1>Oral Care</h1>
+        <h1>Herbal Supplements</h1>
       </div>
       <div className="product-menu-dropdown-div">
         <select className="filter" onChange={(e) => handleSort(e.target.value)}>
@@ -56,10 +56,10 @@ const Herbal = (props) => {
       </div>
       <div className="maindiv">
         <div className="sidebar_div">
-          <HerbalSideBar />
+          <HerbalSideBarDiv />
         </div>
         <div className="right_div">
-
+        <HerbalRightDiv data={data} />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React,{useEffect} from "react";
-import OralRightDiv from "./OralRightDiv";
+import HerbalRightDiv from "./HerbalRightDiv";
 import "../Shop.css";
 import SideBarOral from "./SideBarOral";
 import { useState } from "react";
@@ -56,10 +56,10 @@ const OralCare = (props) => {
       </div>
       <div className="maindiv">
         <div className="sidebar_div">
-          <SideBarOral />
+          <HerbalSideBar />
         </div>
         <div className="right_div">
-          <OralRightDiv data={data} />
+          <HerbalRightDiv data={data} />
         </div>
       </div>
     </div>

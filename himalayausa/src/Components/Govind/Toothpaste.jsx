@@ -1,29 +1,40 @@
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Checkbox, } from '@chakra-ui/react'
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Checkbox, Radio, RadioGroup, Stack, } from '@chakra-ui/react'
 import React, { useState } from 'react';
 import toothpaste from '../db.json'
+import axios from 'axios';
+
 
 
 const Toothpaste = () => {
 
-const [count,setCount ]=useState(toothpaste.toothpaste)
-console.log(count);
+const [data,setData ]=useState(toothpaste.toothpaste);
+
+
 
 const handleClick = (value) => {
-  let newProducts = count.filter((elem) => {
-    console.log(elem.Name.split("-")[1])
-    return elem.Name.split("-")[1]===value;
+  if(value==="All"){
+  console.log(toothpaste.toothpaste)
+    setData(toothpaste.toothpaste)
+  }
 
+  let newProducts = toothpaste.toothpaste.filter((elem) => {
+   return elem.Name.split("-")[1] === value;
   });
-  console.log(newProducts);
-  setCount(newProducts);
-  
+  // console.log(newProducts);
+  setData(newProducts);
 };
 
-
-
-
-
-  return (
+const handleChange=(elem)=>{
+  axios.post(`https://my-himalayausa-project.herokuapp.com/cart`,{
+    Name: elem.Name,
+    Img:elem.Img,
+    Price:elem.Price,
+    count:1
+  })
+  .then((response)=>console.log(response.data))
+  .catch((err)=>console.log(err))
+}
+return (
     <div>
       
       <h1 style={{fontSize:"45px"}}>Kids Toothpaste</h1><br></br>
@@ -43,7 +54,7 @@ const handleClick = (value) => {
       </AccordionButton>
     </h2>
     <AccordionPanel pb={1}>
-    <Checkbox defaultChecked>Kids</Checkbox>
+    <Checkbox >Kids</Checkbox>
     </AccordionPanel>
   </AccordionItem>
 
@@ -63,11 +74,16 @@ const handleClick = (value) => {
       </AccordionButton>
     </h2>
     <AccordionPanel pb={1}>
-   
-    <Checkbox onChange={()=>handleClick("All")} >All</Checkbox><br></br>
-    <Checkbox onChange={()=>handleClick("Mint")}>Mint</Checkbox><br></br>
-    <Checkbox onChange={()=>handleClick("Bubble Gum")}>Bubble Gum</Checkbox><br></br>
-    <Checkbox  onChange={()=>handleClick("Orange")}>Orange</Checkbox><br></br>
+
+<RadioGroup defaultValue='1'>
+  <Stack >
+    <Radio value='1' onChange={()=>handleClick("All")}>All</Radio>
+    <Radio value='2' onChange={() => handleClick("Cool Mint")}>Mint</Radio>
+    <Radio value='3' onChange={()=>handleClick("Bubble Gum")}>Bubble Gum</Radio>
+    <Radio value='4' onChange={()=>handleClick("Orange")}>Orange</Radio>
+  </Stack>
+</RadioGroup>
+
     </AccordionPanel>
   </AccordionItem>
 
@@ -80,14 +96,14 @@ const handleClick = (value) => {
      
       <div style={{display:"flex", marginLeft:"-23%" }}>
         {
-          count.map((el)=>{
+          data.map((el)=>{
             return (
             <div >
              
               <img style={{height:"250px"}}src={el.Img}/>
               <h4>{el.Name}</h4>
               <h4>$:{el.Price}</h4>
-              <button>Add To Cart</button>
+              <Button onClick={()=>handleChange(el)}className="button hvr-grow">Add To Cart</Button>
             </div>
             )
           })

@@ -59,7 +59,7 @@ const Herbal = (props) => {
           <HerbalSideBar />
         </div>
         <div className="right_div">
-          <HerbalRightDiv data={data} />
+
         </div>
       </div>
     </div>

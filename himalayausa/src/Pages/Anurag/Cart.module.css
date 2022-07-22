@@ -1,0 +1,10 @@
+.cartBox_any{
+    display: grid;
+    grid-template-columns: 5% 10% 45% 10% 10% 10% ;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap:1%;
+    border-top: 1px solid grey;
+    padding: 3% 0% 3% 0%;
+}

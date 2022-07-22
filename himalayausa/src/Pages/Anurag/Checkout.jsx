@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Stack, HStack, VStack, Text, Box, Image, Button, Spacer, Link, Input } from '@chakra-ui/react'
 import CheckoutPayment from "../Components/CheckoutPayment";
-import styles from "./Checkout.module.css"
+import styles from "./Checkout.module.css";
 
 const Checkout=()=>{
+
+
+    // const StyleCheckoutBox = styled.div`
+    //     @media (min-width:0px) and (max-width: 600px){
+    //         grid-template-columns: 1;
+    //     }
+    // `
+
+    const handleProceedPayment=()=>{
+        
+    }
 
     return (
         <div className={styles.mainBox_any}>
@@ -65,7 +76,7 @@ const Checkout=()=>{
 
                     <Input focusBorderColor="#0D362B" type="number" placeholder="Phone Number" />
 
-                    <Button  bg="#0D362B" color="white" >Proceed to Payment</Button>
+                    <Button  bg="#0D362B" color="white" onClick={handleProceedPayment} >Proceed to Payment</Button>
 
                </Stack>
                

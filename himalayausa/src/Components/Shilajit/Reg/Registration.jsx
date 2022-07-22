@@ -31,7 +31,7 @@ import {
             <Heading fontSize={'4xl'} textAlign={'center'}>
             Create an Account
             </Heading>
-            <Text fontSize={'lg'} color={'gray.600'}>
+            <Text fontSize={'lg'} color={'gray.600'} >
             Personal Information
             </Text>
           </Stack>

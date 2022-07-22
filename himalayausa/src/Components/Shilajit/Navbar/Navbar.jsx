@@ -47,7 +47,7 @@ const Navbar = () => {
        <nav className='wrapper'>
        <div className='hum'>
                <img src={hum} alt="" className="Th-lines" onClick={(()=>setClose(true))} />
-               <img src="https://leap.himalayawellness.com/IOD/Content/images/login/header_logo.png" alt="" className="himalaya" onClick={(()=>Navigate('/'))}/>
+               <img src="https://leap.himalayawellness.com/IOD/Content/images/login/header_logo.png" alt="" className="hima" onClick={(()=>Navigate('/'))}/>
            </div>
 
            <div className='navbarsub'>
@@ -188,8 +188,8 @@ const Navbar = () => {
                    </div>
                    <div className='mini_drop-box'>
                        <div className='grid'>
-                           <Link className='link-l' to={'/SignIn'}>Sign In</Link>
-                           <Link className='link-l' to={'/Login'}>Register</Link>
+                           <Link className='link-l' to={'/Login'}>Sign In</Link>
+                           <Link className='link-l' to={'/Registration'}>Register</Link>
                            <Link className='link-l' to={'/Checkout'}>Checkout</Link>
                        </div>
                    </div>

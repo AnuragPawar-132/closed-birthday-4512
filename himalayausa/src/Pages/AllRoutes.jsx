@@ -23,8 +23,8 @@ const AllRoutes = () => {
         <Route path="/Shop/:id" element={<ShopDetails />} />
         <Route path="/OralCare" element={<OralCare />} />
         <Route path="/OralCare/:id" element={<OralCareDetails />} />
-        <Route path="/HerbalSupplement" element={<Herbal />} />
-        <Route path="/HerbalSupplement/:id" element={<HerbalDetail />} />
+        <Route path="/HerbalSupplements" element={<Herbal />} />
+        <Route path="/HerbalSupplements/:id" element={<HerbalDetail />} />
       </Routes>
     </div>
   );

@@ -1,11 +1,11 @@
 import React,{useEffect} from "react";
-import OralRightDiv from "./OralRightDiv";
+import HerbalRightDiv from "./HerbalRightDiv";
 import "../Shop.css";
 import SideBarOral from "./SideBarOral";
 import { useState } from "react";
 import axios from "axios";
 
-const OralCare = (props) => {
+const Herbal = (props) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -56,14 +56,14 @@ const OralCare = (props) => {
       </div>
       <div className="maindiv">
         <div className="sidebar_div">
-          <SideBarOral />
+          <HerbalSideBar />
         </div>
         <div className="right_div">
-          <RightDiv data={data} />
+
         </div>
       </div>
     </div>
   );
 };
 
-export default OralCare;
+export default Herbal;

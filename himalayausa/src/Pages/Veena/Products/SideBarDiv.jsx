@@ -1,7 +1,7 @@
 import React from "react";
 
 const SideBarDiv = (props) => {
-    console.log(props)
+    // console.log(props)
   return (
     <div>
       <select className="sidebarfilter" onChange={(e) => props.handlefilter(e.target.value)}>

@@ -6,3 +6,8 @@
     height: 250px;
     width: 90%
 }
+.countDisplayBox{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+}

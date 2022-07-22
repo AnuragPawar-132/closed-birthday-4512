@@ -1,11 +1,9 @@
 .notify{
     background-color: #f75;
-    height: 40px;
-    /* padding:10px 0px 0px 0px; */
+    height: 32px;
+    padding:10px 0px 0px 0px;
     color: white;
     font-size: 20px;
-    text-align:center;
-    
 }
 .splitfree{
     font-weight: bold;
@@ -64,8 +62,6 @@ header{
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
-    position: absolute;
-    z-index: 999;
 }
 .navbarsub div:hover .megabox1 {
     opacity: 1;
@@ -126,13 +122,13 @@ hr{
     width: auto;
 }
 
-.himg{
+.img{
     height: 330px;
     width: 330px;
-    margin-right: 530px;
+    margin-left: -430px;
     margin-top: 40px;
 }
-.himg {
+.img {
     /* width: 86%; */
     -webkit-transition: all 3s ease;
     -moz-transition: all 3s ease;
@@ -140,12 +136,12 @@ hr{
     transition: all 3s ease;
     cursor: pointer;
   }
-  .himg:hover {
+  .img:hover {
     transform: scale(1.1);
     /* -webkit-transition: all 0.3s ease-out; */
   }
-.himgbtn{
-    /* margin-left: -430px; */
+.btn{
+    margin-left: -430px;
     margin-top: 5px;
     background-color: #f75;
     color: white;
@@ -157,8 +153,8 @@ hr{
     font-size: 18px;
     height: 40px;
 }
-.himgp{
-    /* margin-left: -430px; */
+.p{
+    margin-left: -430px;
     font-size: 18px;
     color: gray;
 }
@@ -166,13 +162,13 @@ hr{
 .icons{
     display: flex;
     gap: 5%;
-    justify-content: right;
+    justify-content: space-between;
 }
 .icons img{
     width: 30px;
     height: 30px;
     margin-top: 65%;
-    padding-right: 30px;
+    /* padding-right: 10px; */
 }
 .drop-menu{
     display: grid;
@@ -199,19 +195,20 @@ hr{
 /*................................. search icon css ...............*/
 .mini_drop-box{
     display: block;
-}.grid{
+}
+.grid{
     display: grid;
     grid-template-rows: repeat(3,1fr);
     gap: 20px;
     background-color: white;
     width: 100%;
     /* padding: 100%; */
-    padding-left: 50%;
+    /* padding-left: 50%;
     padding-right: 50%;
     margin-left: -80%;
     margin-top: 42%;
     padding-top: 20%;
-    padding-bottom: 20%;
+    padding-bottom: 20%; */
     /* padding: 50% 20% ; */
 }
 .link-l:hover{
@@ -223,8 +220,7 @@ hr{
     text-decoration: none;
     font-size: 20px;
 }
-/* ......................srarch bar css............................ */
-.search-div{
+/* ......................srarch bar css............................ */.search-div{
     margin: auto;
     width: 100%;
     font-family: Poppins, sans-serif;
@@ -290,6 +286,8 @@ hr{
     border: none;
     border-style: none;
     font-size: 50px;
+    background-color: #fff;
+    color: #000;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:black;
@@ -399,9 +397,8 @@ hr{
     }
     .navbarsub{
         visibility: hidden;
-
     }
-    .himalaya{
+    .himimg{
         height: 70px;
         width: 200px;
         padding-top:20px ;
@@ -429,13 +426,12 @@ hr{
         /* margin-left: -100px; */
     }
     .search_button input{
-        /* width:50%; */
-        /* height: 50px; */
+        width: 50%;
+        height: 50px;
         border: none;
         border-style: none;
-        font-size: 25px;
-        padding-right: 10px;
-        margin-left: 10px;
+        font-size: 50px;
+    
     }
     ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
         color:black;
@@ -486,18 +482,18 @@ hr{
         padding-right: 3%;
         margin-top: 30px;
     }
-    .himalaya{
+    .himimg{
         height: 60px;
         width: 100px;
-        padding-top:30px ;
+        /* padding-top:30px ; */
       
     }
     .navbarsub{
         visibility: hidden;
     }
-    .icon-img{
+    /* .icon-img{
         margin-right: 400%;
-    }
+    } */
     .navbar-nav{
         padding-top: -30px;
     }

@@ -7,6 +7,20 @@ import { useEffect } from "react";
 const OralCareDetails = (props) => {
   const params = useParams();
   const [data, setData] = useState({});
+  const [count , setCount] = useState(0);
+
+  const incCount = () => {
+    setCount(count+1);
+}
+
+const decCount = () => {
+  if(count > 0){
+    setCount(count-1);
+  }
+  else{
+    setCount(0)
+  }
+}
 
   useEffect(() => {
     axios({
@@ -47,14 +61,18 @@ const OralCareDetails = (props) => {
         <p>{data.Name}</p>
         <p>$ {data.Price}</p>
         </div>
-        <div>
+        <div className="mainbtn-div">
+          <div className="counterdiv">
+          <button className="countbtn" onClick={decCount}>-</button>
+          <div className="countbtn">{count}</div>
+          <button className="countbtn" onClick={incCount}>+</button>
+          </div>
           <button className="btns" onClick={() => addtocart(data)}>
             ADD TO CART
           </button>
-          <br />
-          <br />
-          <button className="btn1">Buy With G Pay</button>
         </div>
+        <br />
+          <button className="btn1">Buy With G Pay</button>
         <br />
         <h1>{data.Product_desc}</h1>
         <br />

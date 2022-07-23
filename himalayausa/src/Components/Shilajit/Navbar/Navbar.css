@@ -1,7 +1,11 @@
 .notify{
     background-color: #f75;
+
+    height: 40px;
+
     height: 32px;
     padding:10px 0px 0px 0px;
+
     color: white;
     font-size: 20px;
 }
@@ -10,16 +14,24 @@
     color: white;
     font-size: 20px;
 }
+.hum{
+    display: flex;
 
+}
+
+.hima {
+    height: 60px;
+    margin-top: 24px;
+}
 .wrapper{
     display: flex;
-    gap:30px;
+   
     background-color: white;
     position: relative;
-    /* border-bottom:  solid gray; */
+    
 }
 .wrapper>div{
-    margin-left: 3%;
+    margin-left:3px;
 }
 header{
     font-size: 22px;
@@ -32,16 +44,14 @@ header{
     display: flex;
 }
 
-
 .navbarsub{
     display: flex;
-    gap: 10%;
+    gap: 5%;
     font-size: 20px;
     margin-top: 42px;
     width: 55%;
     font-family: Poppins, sans-serif;
-    
-   
+
 }
 .navbarsub>Link{
     color: grey;
@@ -171,7 +181,10 @@ hr{
     width: 30px;
     height: 30px;
     margin-top: 65%;
-    /* padding-right: 10px; */
+
+    margin-left: 25px;
+   
+
 }
 .drop-menu{
     display: grid;
@@ -403,13 +416,19 @@ hr{
     .navbarsub{
         visibility: hidden;
     }
+
+    /* .himalaya{
+        height: 20px;
+
     .himimg{
         height: 70px;
+
         width: 200px;
         padding-top:20px ;
         margin-left: 1%;
+        margin-top: -10px;
       
-    }
+    } */
 
     .icon-img{
         margin-right: 100%;
@@ -493,6 +512,7 @@ hr{
         /* padding-top:30px ; */
       
     }
+  
     .navbarsub{
         visibility: hidden;
     }

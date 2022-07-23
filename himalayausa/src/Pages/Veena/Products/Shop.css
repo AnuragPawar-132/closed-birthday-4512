@@ -17,10 +17,11 @@
 .maindiv{
     display: flex;
     width: 97%;
+    gap: 4%
 }
 
 .sidebar_div{
-    width: 30%;
+    width: 24%;
 }
 
 .sidebarfilter{
@@ -59,7 +60,7 @@
 }
 
 .name{
-    font-size: 18px;
+    font-size: 19px;
     color: rgb(95, 94, 94);
     margin-left: 4%;
 }
@@ -92,4 +93,61 @@
     height: 40px;
     color: white;
     font-weight: bold;
+}
+
+.btns{
+    width: 60%;
+    margin-left: 5%;
+    background-color: rgb(79, 145, 143);
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.btn1{
+    width: 90%;
+    margin-left: 5%;
+    background-color: black;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.product-category1{
+    width: 80%;
+    margin-top: 5%;
+    text-align: left;
+    font-size: larger;
+    font-weight: bold;
+    
+}
+.product-details-img{
+    width: 80%;
+    /* margin-right: 40%; */
+}
+.divs1{
+    font-size: 45px;
+}
+
+.mainbtn-div{
+    display: flex;
+    margin-left: 9%;
+}
+
+.counterdiv{
+    border-radius: 25px;
+    border: 1px solid grey;
+    display: flex;
+    width: 20%;
+    background-color: rgb(238, 235, 235);
+    gap: 25%;
+    height: 50px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.countbtn{
+    font-size: 30px;
+
 }

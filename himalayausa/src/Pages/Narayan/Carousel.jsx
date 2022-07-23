@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   IconButton,
@@ -60,6 +61,7 @@ export default function BannerCarousel() {
         "https://www.beauticool.com/product_images/1476724541_himalaya1.jpg",
     },
   ];
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -141,7 +143,7 @@ export default function BannerCarousel() {
                 <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
                   {card.text}
                 </Text>
-                <Button colorScheme="teal" size="sm" width="100px">
+                <Button colorScheme="teal" size="sm" width="100px" onClick={()=>navigate("/shop")}>
                   Shop Now
                 </Button>
               </Stack>

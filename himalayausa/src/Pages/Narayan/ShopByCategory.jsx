@@ -1,8 +1,11 @@
 import React from "react";
 import { Box, Text, Image, Stack } from "@chakra-ui/react";
 import styles from "./ShopByCategory.module.css"
+import { useNavigate} from "react-router-dom";
 
 const ShopByCategory = () => {
+  const navigate= useNavigate();
+
   return (
     <div style={{ marginTop: "100px" }}>
       <div mt={16} display="flex" alignItems="center" flexDirection="column">
@@ -16,7 +19,7 @@ const ShopByCategory = () => {
             alignItems="center"
             justifyContent="center"
           >
-            <Box
+            <Box  onClick={()=>navigate("/HerbalSupplements")}
               w="379px"
               h="470px"
               textAlign="center"
@@ -37,7 +40,7 @@ const ShopByCategory = () => {
               </Text>
               <Text color="#a9b9a1">See All Supplements</Text>
             </Box>
-            <Box
+            <Box onClick={()=>navigate("/OralCare")}
               w="379px"
               h="470px"
               textAlign="center"
@@ -54,11 +57,11 @@ const ShopByCategory = () => {
                 width="350px"
               />
               <Text fontWeight="500" fontSize="1.2em" mt="10px">
-                Supplements
+                Oral Care
               </Text>
-              <Text color="#a9b9a1">See All Supplements</Text>
+              <Text color="#a9b9a1">See All Oral Care</Text>
             </Box>
-            <Box
+            <Box onClick={()=>navigate("/PersonalCare")}
               w="379px"
               h="470px"
               textAlign="center"
@@ -75,9 +78,9 @@ const ShopByCategory = () => {
                 width="350px"
               />
               <Text fontWeight="500" fontSize="1.2em" mt="10px">
-                Supplements
+                Personal Care
               </Text>
-              <Text color="#a9b9a1">See All Supplements</Text>
+              <Text color="#a9b9a1">See All Personal Care</Text>
             </Box>
           </Stack>
         </div>

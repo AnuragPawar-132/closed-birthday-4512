@@ -2,6 +2,7 @@
   "name": "himalayausa",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.4",
     "@chakra-ui/react": "^2.2.4",
@@ -20,8 +21,10 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "react-toastify": "^9.0.7",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
+    "slick-carousel": "^1.8.1",
     "thunk": "^0.0.1",
     "web-vitals": "^2.1.4"
   },

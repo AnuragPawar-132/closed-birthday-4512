@@ -11,3 +11,6 @@
     flex-direction: row;
     width: 25%;
 }
+.input::placeholder {
+    font: 18px/3 sans-serif;
+}

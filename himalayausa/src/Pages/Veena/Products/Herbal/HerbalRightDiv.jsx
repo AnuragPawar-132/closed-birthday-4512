@@ -2,8 +2,13 @@ import React from "react";
 import "../Shop.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const HerbalRightDiv = (props) => {
+
+  const warning = () => toast.warning("Item already present in Bag");
+  const success = () => toast.success("Item Added to Bag");
   // console.log(props)
 
   const products = props.data;
@@ -18,14 +23,17 @@ const HerbalRightDiv = (props) => {
       })
       .then((r) => {
         console.log(r);
-        alert("product added to cart successfully");
+        // alert("product added to cart successfully");
+        success()
       })
       .catch((err) => {
         alert("Error");
+        warning()
       });
   };
 
   return (
+    <>
     <div className="mapping-data">
       {products?.map((e) => {
         return (
@@ -39,7 +47,7 @@ const HerbalRightDiv = (props) => {
               </div>
               <div className="seconddiv">
                 <h6 className="price">$ {e?.Price}</h6>
-                <button className="btn" onClick={() => addtocart(e)}>
+                <button className="btn123" onClick={() => addtocart(e)}>
                   ADD TO CART
                 </button>
               </div>
@@ -48,6 +56,8 @@ const HerbalRightDiv = (props) => {
         );
       })}
     </div>
+    <ToastContainer />
+    </>
   );
 };
 

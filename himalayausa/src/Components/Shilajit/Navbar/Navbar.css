@@ -1,9 +1,8 @@
 .notify{
     background-color: #f75;
 
-    height: 40px;
 
-    height: 32px;
+    height: auto;
     padding:10px 0px 0px 0px;
 
     color: white;
@@ -13,6 +12,7 @@
     font-weight: bold;
     color: white;
     font-size: 20px;
+    height: auto;
 }
 .hum{
     display: flex;
@@ -51,6 +51,7 @@ header{
     margin-top: 42px;
     width: 55%;
     font-family: Poppins, sans-serif;
+
 }
 .navbarsub>Link{
     color: grey;
@@ -59,10 +60,12 @@ header{
 .LINK{
     color: grey;
     text-decoration: none;
+
 }
 .LINK:hover{
     text-decoration: underline;
     font-weight: bold;
+    cursor: pointer;
 }
 .Link:hover{
     text-decoration: underline;
@@ -72,6 +75,8 @@ header{
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
+    position: absolute;
+    z-index: 999;
 }
 .navbarsub div:hover .megabox1 {
     opacity: 1;
@@ -130,6 +135,7 @@ hr{
 .rightside-icons{
     display: flex;
     width: auto;
+    
 }
 
 .img{
@@ -187,23 +193,32 @@ hr{
     display: grid;
     margin-top: 80px;
 }
+
+
 .mini_drop-box{
     position:absolute;
     visibility: hidden;
     opacity: 0;
-    top: 20;
+    top: -85;
     transition: all 0.3s ease;
     width: auto;
     margin-top: 2px;
+    line-height: 10px;
 }
 .hover_drop-down{
-    position: relative;
+    position: absolute;
     cursor: pointer;
+    top:0;
+    bottom: 0;
+    margin-left: 100px;
 }
 .hover_drop-down:hover div{
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 999;
+    
 }
 /*................................. search icon css ...............*/
 .mini_drop-box{
@@ -567,6 +582,3 @@ hr{
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
-
-
-

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Stack, HStack, VStack, Text, Box, Image, Button, Spacer, Link, Input } from '@chakra-ui/react'
-import CheckoutPayment from "../Components/CheckoutPayment";
+import CheckoutPayment from "../../Components/Anurag/CheckoutPayment";
 import styles from "./Checkout.module.css";
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 
 const Checkout=()=>{
 
 
+    const navigate= useNavigate()
     // const StyleCheckoutBox = styled.div`
     //     @media (min-width:0px) and (max-width: 600px){
     //         grid-template-columns: 1;
@@ -13,17 +15,19 @@ const Checkout=()=>{
     // `
 
     const handleProceedPayment=()=>{
-        
+        setTimeout(()=>{
+            navigate('/paymentsuccess')
+        }, 2000)
     }
 
     return (
         <div className={styles.mainBox_any}>
 
-            <VStack   padding="2%" border="1px solid grey" spacing="3%" >
+            <VStack   padding="2%"  spacing="3%" >
 
-               <Box alignContent="left" padding="3% 0% 3% 6%" >
+               {/* <Box alignContent="left" padding="3% 0% 3% 6%" >
                     <Image w="35%" h="auto" src="https://cdn.shopify.com/s/files/1/0399/1728/9633/files/new-logo.png?3734" /> 
-               </Box>
+               </Box> */}
 
                <Box w="90%" >
                     <Text fontSize="small" fontWeight="bold" color="blackAlpha.700" fontStyle='system-ui' >Express Checkout</Text>
@@ -48,33 +52,34 @@ const Checkout=()=>{
                             <Text fontSize='lg' >Contact Information</Text>
                         </Box>
                         <HStack>
-                            <Text color="blackAlpha.700"  >Alredy have an account :</Text>
-                            <Link color="blackAlpha.700" >Login</Link>
+                            <Text color="blackAlpha.700"  >Already have an account :</Text>
+                            <RouterLink color="blackAlpha.700" to="/Login" >Login</RouterLink>
                         </HStack>
                     </HStack>
 
-                    <Input focusBorderColor="#0D362B" placeholder="Enter Email or Mobile number" />
+                    <Input className={styles.input} focusBorderColor="#0D362B" placeholder="Enter Email or Mobile number" />
+                    
 
                     <Text fontSize='lg' >Shipping Address</Text>
 
-                    <Input focusBorderColor="#0D362B" placeholder="Country" />
+                    <Input className={styles.input} focusBorderColor="#0D362B" placeholder="Country" />
 
                     <HStack>
-                        <Input focusBorderColor="#0D362B" placeholder="First Name" />
-                        <Input focusBorderColor="#0D362B" placeholder="Last Name" />
+                        <Input className={styles.input} focusBorderColor="#0D362B" placeholder="First Name" />
+                        <Input className={styles.input} focusBorderColor="#0D362B" placeholder="Last Name" />
                     </HStack>
 
-                    <Input focusBorderColor="#0D362B" placeholder="Address" />
+                    <Input className={styles.input} focusBorderColor="#0D362B" placeholder="Address" />
 
-                    <Input focusBorderColor="#0D362B" placeholder="Appartment" />
+                    <Input className={styles.input} focusBorderColor="#0D362B" placeholder="Appartment" />
 
                     <HStack>
-                        <Input focusBorderColor="#0D362B" placeholder="City" />
-                        <Input focusBorderColor="#0D362B" placeholder="State" />
-                        <Input focusBorderColor="#0D362B" type="number" placeholder="Zip Code" />
+                        <Input className={styles.input} focusBorderColor="#0D362B" placeholder="City" />
+                        <Input className={styles.input} focusBorderColor="#0D362B" placeholder="State" />
+                        <Input className={styles.input} focusBorderColor="#0D362B" type="number" placeholder="Zip Code" />
                         </HStack>
 
-                    <Input focusBorderColor="#0D362B" type="number" placeholder="Phone Number" />
+                    <Input className={styles.input} focusBorderColor="#0D362B" type="number" placeholder="Phone Number" />
 
                     <Button  bg="#0D362B" color="white" onClick={handleProceedPayment} >Proceed to Payment</Button>
 

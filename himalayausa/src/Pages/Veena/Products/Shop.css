@@ -16,8 +16,8 @@
 
 .maindiv{
     display: flex;
-    width: 97%;
-    gap: 4%
+    width: 98%;
+    gap: 2%
 }
 
 .sidebar_div{
@@ -27,20 +27,21 @@
 .sidebarfilter{
     padding: 1.9%;
     border: 2px solid white;
-    font-weight: bold;
-    font-size: 135%;
+    font-weight: 500;
+    font-size: 120%;
     text-decoration: none;
     margin-left: 8%;
+    text-align: left;
 }
 
 .right_div{
-    width: 90%;
+    width: 100%;
 }
 
 .mapping-data{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
 }
 .data-item{
     border: 1px solid honeydew;
@@ -49,7 +50,7 @@
     height: 105%;
 }
 .image{
-    height: 250px;
+    height: auto;
     width: 100%;
 }
 
@@ -86,13 +87,14 @@
     margin-top: 18%;
 }
 
-.btn{
+.btn123{
     width: 60%;
     margin-left: 5%;
     background-color: rgb(79, 145, 143);
     height: 40px;
     color: white;
     font-weight: bold;
+    border-radius:10px;
 }
 
 .btns{

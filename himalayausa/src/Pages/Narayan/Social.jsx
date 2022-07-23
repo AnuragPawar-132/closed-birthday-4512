@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "@chakra-ui/react";
 import { BsInstagram } from "react-icons/bs";
 import { ImFacebook } from "react-icons/im";
-import { Link } from "react-router-dom";
+
 
 const Social = () => {
   return (

@@ -54,9 +54,9 @@ const ShopByCategory = () => {
                 width="350px"
               />
               <Text fontWeight="500" fontSize="1.2em" mt="10px">
-                Supplements
+                Oral Care
               </Text>
-              <Text color="#a9b9a1">See All Supplements</Text>
+              <Text color="#a9b9a1">See All Oral Care</Text>
             </Box>
             <Box
               w="379px"
@@ -75,9 +75,9 @@ const ShopByCategory = () => {
                 width="350px"
               />
               <Text fontWeight="500" fontSize="1.2em" mt="10px">
-                Supplements
+                Personal Care
               </Text>
-              <Text color="#a9b9a1">See All Supplements</Text>
+              <Text color="#a9b9a1">See All Personal Care</Text>
             </Box>
           </Stack>
         </div>

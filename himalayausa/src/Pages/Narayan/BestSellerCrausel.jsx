@@ -1,10 +1,10 @@
 import React from "react";
+import { axios } from "axios";
 import {
   Box,
   IconButton,
   useBreakpointValue,
   Stack,
-  
   Image,
   Text,
   Container,
@@ -96,6 +96,24 @@ export default function BestSellerCarousel() {
       price: 14.95,
     },
   ];
+  
+  const addtocart = (elem) => {
+    console.log(elem)
+    axios
+      (`https://my-himalayausa-project.herokuapp.com/cart`, {
+        Name: elem.title,
+        Img: elem.image,
+        Price: elem.price,
+        count: 1,
+      })
+      .then((r) => {
+        console.log(r);
+        alert("product added to cart successfully");
+      })
+      .catch((err) => {
+        console.log("error")
+      });
+  };
 
   return (
     <Box position={"relative"} width={"full"} overflow={"hidden"}>
@@ -126,13 +144,20 @@ export default function BestSellerCarousel() {
         <BsChevronCompactRight size="30px" />
       </IconButton>
       {/* Slider */}
-      <div style={{justifyContent:"center",paddingLeft:"100px",paddingRight:"100px",alignItems:"center"}}>
+      <div
+        style={{
+          justifyContent: "center",
+          paddingLeft: "100px",
+          paddingRight: "100px",
+          alignItems: "center",
+        }}
+      >
         <Slider
           {...settings}
           ref={(slider) => setSlider(slider)}
           overflow={"hidden"}
         >
-          {cards.map((card, index) => (
+          {cards.map((elem, index) => (
             <Box key={index} height={"100%"} width="268px" padding="20px">
               {/* This is the block you need to change, to customize the caption */}
               <Container size="container.lg" height="400px" position="relative">
@@ -145,15 +170,20 @@ export default function BestSellerCarousel() {
                   left="-50%"
                   transform="translate(0, -50%)"
                 >
-                  <Image src={card.image} width="268px" height="268px" />
+                  <Image src={elem.image} width="268px" height="268px" />
                   <Text bg={"white"} fontWeight="500" marginLeft="20px">
-                    {card.title}
+                    {elem.title}
                   </Text>
                   <Flex gap="10px">
-                    <Button bg="#a9b9a1" size="md" width="100px">
+                    <Button
+                      bg="#a9b9a1"
+                      size="md"
+                      width="100px"
+                      onClick={() => addtocart(elem)}
+                    >
                       <BsHandbag size="20px" />
                     </Button>
-                    <Text>${card.price}</Text>
+                    <Text>${elem.price}</Text>
                   </Flex>
                 </Stack>
               </Container>

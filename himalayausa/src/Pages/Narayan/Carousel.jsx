@@ -9,6 +9,7 @@ import {
   Text,
   Container,
   Button,
+  VStack,
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 
@@ -42,12 +43,12 @@ export default function BannerCarousel() {
   // This list contains all the data for carousels
   // This can be static or loaded from a server
   const cards = [
-    {
-      title: "ASHWAGANDHA",
-      text: "A star performer for stress and energy in a potent, organic caplet.",
-      image:
-        "https://cdn.shopify.com/s/files/1/0399/1728/9633/files/hero-desktop-ashwagandha_x720.jpg?v=1608662725",
-    },
+    // {
+    //   title: "ASHWAGANDHA",
+    //   text: "A star performer for stress and energy in a potent, organic caplet.",
+    //   image:
+    //     "https://cdn.shopify.com/s/files/1/0399/1728/9633/files/hero-desktop-ashwagandha_x720.jpg?v=1608662725",
+    // },
     {
       title: "",
       text: "",
@@ -64,12 +65,12 @@ export default function BannerCarousel() {
   const navigate = useNavigate();
 
   return (
-    <Box
+    <Box 
       position={"relative"}
       height={"550px"}
       width={"full"}
       overflow={"hidden"}
-      mt={"-20px"}
+      mt={"-37px"}
     >
       {/* CSS files for react-slick */}
 
@@ -134,6 +135,9 @@ export default function BannerCarousel() {
                 left="-50%"
                 transform="translate(0, -50%)"
               >
+                
+                
+              
                 <Heading
                   bg={"white"} fontWeight="500"
                   fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
@@ -143,9 +147,14 @@ export default function BannerCarousel() {
                 <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
                   {card.text}
                 </Text>
+                
+
+               
                 <Button colorScheme="teal" size="sm" width="100px" onClick={()=>navigate("/shop")}>
                   Shop Now
                 </Button>
+               
+                
               </Stack>
             </Container>
           </Box>

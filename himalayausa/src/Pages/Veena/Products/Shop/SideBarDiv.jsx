@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import  "../Shop.css"
 const SideBarDiv = (props) => {
     // console.log(props)
   return (
-    <div>
+    <div >
       <ul className="sidebarfilter">
       <li value="Shop"><Link to="/Shop">Health Category</Link></li>
       <li value="HerbalSupplements"><Link to="/HerbalSupplements">Herbal Supplements</Link></li>

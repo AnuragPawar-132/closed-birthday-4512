@@ -18,14 +18,14 @@ const Navbar = () => {
            </div>
            <div className='nav-data'>
                <p onClick={(()=>(navigate("/Shop"),setClose(false)))}>Shop</p>
-               <a className='LINK' href="" target={'_blank'} onClick={(()=>(setClose(false)))}>About</a>
+               <p   onClick={(()=>(navigate("/about"),setClose(false)))}  >About</p>
                <br />
                <a href="https://himalayausa.com/pages/store-locator" className='LINK' target={"_blank"} onClick={(()=>(setClose(false)))}>Store Locator</a>
            </div>
                <hr className='hr'/>
            <div className='account-data'>
                <h3>My Account</h3>
-               <p onClick={()=>(navigate('/SignIn'),setClose(false))}>Sign in</p>
+               <p onClick={()=>(navigate('/Login'),setClose(false))}>Sign in</p>
                <p onClick={()=>(navigate('/Register'),setClose(false))}>Register</p>
                <p onClick={()=>(navigate('/address'),setClose(false))}>Checkout</p>
            </div>
@@ -42,12 +42,14 @@ const Navbar = () => {
        </div>
     <div className='notify'>
            <span className='splitfree'>FREE SHIPPING </span>
-           ON ALL ORDERS OVER $35
+           ON ALL ORDERS OVER $35 
+           <br/>
+           <marquee>**Promocode <strong>NATURE20</strong>**</marquee>
        </div>
        <nav className='wrapper'>
        <div className='hum'>
                <img src={hum} alt="" className="Th-lines" onClick={(()=>setClose(true))} />
-               <img src="https://leap.himalayawellness.com/IOD/Content/images/login/header_logo.png" alt="" className="himimg" onClick={(()=>Navigate('/'))}/>
+               <div onClick={(()=>navigate('/'))} ><img src="https://leap.himalayawellness.com/IOD/Content/images/login/header_logo.png" alt="" className="himalaya" /></div>
            </div>
 
            <div className='navbarsub'>
@@ -174,7 +176,7 @@ const Navbar = () => {
                    <div>
                    </div>
                </div>
-               <a className='LINK' href="" target={'_blank'}>About</a>
+               <p className='LINK'   onClick={(()=>(navigate("/about"),setClose(false)))}  >About</p>
                <a href="https://himalayausa.com/pages/store-locator" className='LINK' target={"_blank"}>Store Locator</a>
            </div>
     
@@ -188,9 +190,10 @@ const Navbar = () => {
                     </div>
                     <div className='mini_drop-box'>
                         <div className='grid'>
-                            <Link className='link-l' to={'/SignIn'}>Sign In</Link>
-                            <Link className='link-l' to={'/Login'}>Register</Link>
-                            <Link className='link-l' to={'/Checkout'}>Checkout</Link>
+                            <Link className='link-l' to={'/Login'}>Sign In</Link>
+                            <Link className='link-l' to={'/Registration'}>Register</Link>
+                            <Link className='link-l' to={'/checkout'} replace="true" >Checkout</Link>
+                            {/* <a className='link-l' href='.././'>Checkout</a> */}
                         </div>
                     </div>
                 </div>

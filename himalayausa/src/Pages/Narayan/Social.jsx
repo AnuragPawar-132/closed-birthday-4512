@@ -58,9 +58,7 @@ const Social = () => {
           />
         </div>
       </a>
-      <br />
-      <br />
-      <br />
+      
     </div>
   );
 };

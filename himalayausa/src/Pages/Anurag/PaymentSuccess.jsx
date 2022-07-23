@@ -1,4 +1,5 @@
 import React from "react";
+import {Box} from '@chakra-ui/react'
 import {
     Alert,
     AlertIcon,
@@ -8,14 +9,15 @@ import {
 
 const PaymentSuccess=()=>{
     return (
-                    <Alert
+        <Box  >
+                    <Alert 
                             status='success'
                             variant='subtle'
                             flexDirection='column'
                             alignItems='center'
                             justifyContent='center'
                             textAlign='center'
-                            height='200px'
+                            height='400px'
                             >
                             <AlertIcon boxSize='40px' mr={0} />
                             <AlertTitle mt={4} mb={1} fontSize='lg'>
@@ -25,6 +27,7 @@ const PaymentSuccess=()=>{
                                 Thanks for shopping with us!
                             </AlertDescription>
                     </Alert>
+                    </Box>
     )
 }
 

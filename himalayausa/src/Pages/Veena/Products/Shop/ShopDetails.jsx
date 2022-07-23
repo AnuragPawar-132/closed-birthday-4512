@@ -4,10 +4,16 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect } from "react";
 
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
+
 const ShopDetails = (props) => {
   const params = useParams();
   const [data, setData] = useState({});
-  const [count , setCount] = useState(0);
+  const [count , setCount] = useState(1);
+  const warning = () => toast.warning("Item already present in Bag");
+  const success = () => toast.success("Item Added to Bag");
 
   const incCount = () => {
     setCount(count+1);
@@ -45,14 +51,16 @@ const decCount = () => {
       })
       .then((r) => {
         console.log(r);
-        alert("product added to cart successfully");
+        success()
+
       })
       .catch((err) => {
-        alert("Error");
+        warning()
       });
   };
 
   return (
+    <>
     <div className="maindiv">
       <div className="product-details-img">
         <img className="images" src={data.Img} alt="Products" />
@@ -85,6 +93,8 @@ const decCount = () => {
         </h5>
       </div>
     </div>
+    <ToastContainer />
+    </>
   );
 };
 

@@ -99,8 +99,7 @@ export default function BestSellerCarousel() {
   
   const addtocart = (elem) => {
     console.log(elem)
-    axios
-      (`https://my-himalayausa-project.herokuapp.com/cart`, {
+    axios.post(`https://my-himalayausa-project.herokuapp.com/cart`, {
         Name: elem.title,
         Img: elem.image,
         Price: elem.price,

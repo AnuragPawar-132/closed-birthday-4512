@@ -40,6 +40,7 @@ header{
     margin-top: 42px;
     width: 55%;
     font-family: Poppins, sans-serif;
+    
    
 }
 .navbarsub>Link{
@@ -62,6 +63,8 @@ header{
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
+    position: absolute;
+    z-index: 999;
 }
 .navbarsub div:hover .megabox1 {
     opacity: 1;
@@ -186,11 +189,13 @@ hr{
 .hover_drop-down{
     position: relative;
     cursor: pointer;
+
 }
 .hover_drop-down:hover div{
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease-in-out;
+    
 }
 /*................................. search icon css ...............*/
 .mini_drop-box{

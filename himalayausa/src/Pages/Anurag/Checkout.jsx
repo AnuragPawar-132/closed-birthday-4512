@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Stack, HStack, VStack, Text, Box, Image, Button, Spacer, Link, Input } from '@chakra-ui/react'
-import CheckoutPayment from "../Components/CheckoutPayment";
+import CheckoutPayment from "../../Components/Anurag/CheckoutPayment"
 import styles from "./Checkout.module.css";
 
 const Checkout=()=>{

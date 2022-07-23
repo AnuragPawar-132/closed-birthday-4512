@@ -30,7 +30,7 @@ const Cart=()=>{
     let total_price = 0;
         
         for(let i=0; i<cartData.length; i++){
-            total_price+= (cartData[i].Price * cartData[i].count);
+            total_price+= (cartData[i].price * cartData[i].count);
         }
 
     useEffect(()=>{
@@ -44,7 +44,7 @@ const Cart=()=>{
             </Box>
             <VStack w="100%" padding="3%"  >
                 {
-                    cartData.length>0 && cartData.map(({Img, Name, id, Price, count})=>{
+                    cartData.length>0 && cartData.map(({Img, Name, id, price, count})=>{
                         return(
                             <div className={styles.cartBox_any} >
                                 <Button color="grey" bg="white" onClick={()=>handleCartItemDelete(id)} >🗑</Button>
@@ -53,7 +53,7 @@ const Cart=()=>{
 
                                 <Box fontSize="2xl" textAlign="left" ><Text>{Name}</Text></Box>
 
-                                <Box><Text fontSize="2xl" color="grey" >$ {Price.toFixed(2)}</Text></Box>
+                                <Box><Text fontSize="2xl" color="grey" >$ {price}</Text></Box>
 
                                 <HStack>
                                     <Button onClick={()=>{if(count>1){handleChangeQuantity(-1, id, count)}}} >-</Button>
@@ -61,7 +61,7 @@ const Cart=()=>{
                                     <Button onClick={()=>{if(count<4){handleChangeQuantity(+1, id, count)}}} >+</Button>
                                 </HStack>
 
-                                <Box><Text fontSize="2xl" color="grey" >$ {(Price * count).toFixed(2)}</Text></Box>
+                                <Box><Text fontSize="2xl" color="grey" >$ {(price * count).toFixed(2)}</Text></Box>
                             </div>
                         )
                     })

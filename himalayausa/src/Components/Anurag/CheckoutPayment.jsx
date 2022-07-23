@@ -12,7 +12,7 @@ const CheckoutPayment=()=>{
     let promo_price = 0;
         
         for(let i=0; i<cartData.length; i++){
-            total_price+= (cartData[i].Price * cartData[i].count);
+            total_price+= (cartData[i].price * cartData[i].count);
         }
      
 
@@ -38,11 +38,11 @@ const CheckoutPayment=()=>{
 
             <VStack className={styles.cartBox_any}  >
                 {
-                    cartData.map(({id, Price, Name, Img, count})=>{
+                    cartData.map(({id, price, Name, Img, count})=>{
                         return <HStack justifyContent="space-around" w="100%" >
                                 <div className={styles.countDisplayBox} ><Image boxSize="60px" src={Img} /><Box w="17px" h="20px" bg="grey" borderRadius="50px" ><Text color="white" >{count}</Text></Box></div>
                                 <Box w="50%" ><Text fontSize='sm' fontWeight="semibold" textAlign="left" >{Name}</Text></Box>
-                                <Box w="25%" ><Text fontSize='sm' fontWeight="semibold" >$ {Price.toFixed(2)}</Text></Box>
+                                <Box w="25%" ><Text fontSize='sm' fontWeight="semibold" >$ {price.toFixed(2)}</Text></Box>
                         </HStack>
                     })
                 }

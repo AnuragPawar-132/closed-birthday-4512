@@ -8,7 +8,7 @@ import {
     AccordionIcon,
   } from '@chakra-ui/react'
 import styles from "./About.module.css"
-import image_anyone_about from "../Components/aboutBanner/about_banner_image.png"
+import image_anyone_about from "../../Components/Anurag/aboutBanner/about_banner_image.png"
 
 
 const About=()=>{

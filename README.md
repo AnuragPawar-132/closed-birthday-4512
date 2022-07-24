@@ -55,7 +55,7 @@
 
  
 
-## This is just a sneak peek of the project which we build during the Construct week of RCT211 at Masai School.
+## sneak peek of the project...
  
 <br/>
 <br/>

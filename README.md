@@ -39,6 +39,8 @@
 
 #Versel
 
+#NPM
+
 ## Deploy link:- <a href="https://himalayausaclone.vercel.app/">Versal</a>
 
 <br/>

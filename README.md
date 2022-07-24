@@ -55,7 +55,7 @@
 
  
 
-## sneak peek of the project...
+## sneak peeks of the project...
  
 <br/>
 <br/>

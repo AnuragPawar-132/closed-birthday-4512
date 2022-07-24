@@ -19,7 +19,19 @@
 
 #Govind Lakhotiya    <a href="https://github.com/Govindlakhotiya" > GitHub</a>
 
+## Tech Stack Used 
 
+#React.js
+
+#Redux.js
+
+#Chakra-UI
+
+#React Slick
+
+#Heroku
+
+#Versel
 
 ## Deploy link:- <a href="https://himalayausaclone.vercel.app/">Versal</a>
 

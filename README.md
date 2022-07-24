@@ -47,6 +47,8 @@
 <br/>
 <br/>
 
+## This website was originally inspired from <a href="https://himalayausa.com/">Himalayausa.com<a/> Our Team made Tremendus efforts and build this website within 5 consicutive days. We used React.js library for the UI part and used REDUX store for maintaing the states of the components. We used Heroku server  API for getting the Mock Data and used Versel to deploy.
+
 ## This is just a sneak peek of the project which we build during the Construct week of RCT211 at Masai School.
 <br/>
 <br/>

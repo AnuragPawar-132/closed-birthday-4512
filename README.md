@@ -21,7 +21,12 @@
 
 
 
-
+# Deploy link:-
+<a href="https://himalayausaclone.vercel.app/">Versal</a>
+<br/>
+<br/>
+<br/>
+## This is just a sneak peek of the project which we build during the Construct week of RCT211 at Masai School.
 
 <img src="https://miro.medium.com/max/1400/1*BlIlkZsBJ_e4uMwsG0RYxg.png" alt="Alt text" title="">
 

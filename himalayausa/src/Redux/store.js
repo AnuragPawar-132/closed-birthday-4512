@@ -6,17 +6,17 @@ import { reducer as AuthReducer } from "./AuthReducer/reducer";
 
 // const rootReducer = combineReducers({ product : AppReducer});
 
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
-const composeEnhancers=
-typeof window ==="object" && window.
-__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-?window.__DEVTOOLS_EXTENSION_COMPOSE__
-({
+//const composeEnhancers=
+//typeof window ==="object" && window.
+//__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+//?window.__DEVTOOLS_EXTENSION_COMPOSE__
+//({
 
     
-}):compose;
+//}):compose;
 const rootreducer=combineReducers({
     product : AppReducer,AuthReducer
 })

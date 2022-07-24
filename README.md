@@ -29,6 +29,12 @@
 
 #React Slick
 
+#JavaScript
+
+#HTML
+
+#CSS
+
 #Heroku
 
 #Versel

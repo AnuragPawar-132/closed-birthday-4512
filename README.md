@@ -23,7 +23,7 @@
 
 #React.js
 
-#Redux.js
+#Redux
 
 #Chakra-UI
 
